@@ -134,6 +134,20 @@ sudo systemctl restart nginx
 http://YOUR-SERVER-IP-ADDRESS:8081/
 ```
 
+## 3. Activate https by installing Let's Encrypt / Certbot (optional)
+```bash
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d subdomain.your-website.tld
+```
+
+### 3.1 Check renewal of generated certificate
+```bash
+sudo certbot renew --dry-run
+```
+
+## 4. Setting up SSH access to GitHub
+```bash
+```
 
 
 
