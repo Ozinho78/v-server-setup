@@ -163,6 +163,8 @@ cat ~/.ssh/github.pub
 
 ### 4.3 Copy public key to github 
 GitHub → Settings → SSH and GPG keys → New SSH key
+![Server Login Screenshot]("images/github public key.png")
+
 
 ### 4.4 Configure ssh on your server with your new key
 ```bash
