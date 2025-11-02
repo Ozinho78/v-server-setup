@@ -134,6 +134,8 @@ sudo systemctl restart nginx
 http://YOUR-SERVER-IP-ADDRESS:8081/
 ```
 
+---
+
 ## 3. Activate https by installing Let's Encrypt / Certbot (optional)
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
@@ -145,11 +147,50 @@ sudo certbot --nginx -d subdomain.your-website.tld
 sudo certbot renew --dry-run
 ```
 
-## 4. Setting up SSH access to GitHub
+---
+
+## 4. Setting up ssh access to GitHub on your server
+
+### 4.1 Generate ssh key for GitHub
 ```bash
+ssh-keygen -t ed25519 -C "your_github_mail_address@domain.com"
 ```
 
-
-
+### 4.2 Show public key
 ```bash
+cat ~/.ssh/github.pub
 ```
+
+### 4.3 Copy public key to github 
+GitHub → Settings → SSH and GPG keys → New SSH key
+
+### 4.4 Configure ssh on your server with your new key
+```bash
+sudo nano ~/.ssh/config
+```
+
+#### 4.4.1 Example configuration, please adjust if necessary
+```bash
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/github
+```
+
+### 4.5 Check connection
+```bash
+ssh -T git@github.com
+```
+
+#### 4.5.1 Check successful output
+```bash
+Hi <GitHub-Username>! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+---
+
+## 🎉 Congratulations!
+
+Your server is now securely configured and ready for use.  
+You’re all set for deploying projects, managing code via GitHub, and continuing your DevSecOps journey. Great job!
+
