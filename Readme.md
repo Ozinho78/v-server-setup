@@ -12,7 +12,7 @@ This document describes the steps taken after the first login to a new Ubuntu se
 ssh-keygen -t ed25519 -C "USER@LOCALHOST"
 ```
 
-#### 1.1.1 The key is stored by default under, (i.e. under Windows C:\Users\USERNAME\.ssh\)
+#### 1.1.1 The key is stored by default in the home directory, (i.e. in Windows C:\Users\USERNAME\.ssh\)
 ```bash
 ~/.ssh/vserver_id_ed25519        (private key)
 ~/.ssh/vserver_id_ed25519.pub    (public key)
@@ -65,7 +65,7 @@ sudo apt install nginx -y
 http://YOUR-SERVER-IP-ADDRESS/
 ```
 
-### 2.3 Alternative site on port 8081, create directory and index.html
+### 2.3 Alternative site on port 8081, create directory and alternate-index.html
 ```bash
 sudo mkdir /var/www/alternatives
 sudo nano /var/www/alternatives/alternate-index.html
