@@ -195,4 +195,3 @@ Hi <GitHub-Username>! You've successfully authenticated, but GitHub does not pro
 
 Your server is now securely configured and ready for use.  
 You’re all set for deploying projects, managing code via GitHub, and continuing your DevSecOps journey. Great job!
-
