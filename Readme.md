@@ -12,7 +12,7 @@ This document describes the steps taken after the first login to a new Ubuntu se
 ssh-keygen -t ed25519 -C "USER@LOCALHOST"
 ```
 
-#### 1.1.1 The key is stored by default under, (i.e. under Windows C:\Users\USERNAME\.ssh\)
+#### 1.1.1 The key is stored by default in, (i.e. in Windows C:\Users\USERNAME\.ssh\)
 ```bash
 ~/.ssh/vserver_id_ed25519        (private key)
 ~/.ssh/vserver_id_ed25519.pub    (public key)
